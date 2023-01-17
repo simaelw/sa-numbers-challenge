@@ -1,6 +1,6 @@
 # South Africa Numbers Challenge
 
-A REST API application validates attempts to fixes South African mobile numbers from a CSV file and single form.
+A REST API application validates and attempts to fixes South African mobile numbers from a CSV file and single form.
 
 This project is developed with [Laravel 9](https://laravel.com/docs/9.x) and php version `8.1.2` for external composer dependencies, composer and mysql database management
 
