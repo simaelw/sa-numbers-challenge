@@ -12,8 +12,8 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Upload Csv'
+      description: 'This endpoint allows you to upload the csv, manipulate the data and save the records on the database.'
       authenticated: false
       custom: []
     headers:
@@ -50,8 +50,8 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'Test number'
+      description: 'This endpoint allows to test or attempt to correct a single provided number.'
       authenticated: false
       custom: []
     headers:
@@ -66,11 +66,11 @@ endpoints:
         name: number
         description: ''
         required: true
-        example: delectus
+        example: commodi
         type: string
         custom: []
     cleanBodyParameters:
-      number: delectus
+      number: commodi
     fileParameters: []
     responses: []
     responseFields: []

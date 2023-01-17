@@ -12,6 +12,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class NumberCsvController extends Controller
 {
+    /**
+     * Upload Csv
+     *
+     * This endpoint allows you to upload the csv, manipulate the data and save the records on the database.
+     * 
+     */
     public function uploadCsv(Request $request)
     {
         $request->validate([

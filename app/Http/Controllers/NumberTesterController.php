@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class NumberTesterController extends Controller
 {
+    /**
+     * Test number
+     *
+     * This endpoint allows to test or attempt to correct a single provided number.
+     * 
+     */
     public function test(Request $request)
     {
         $request->validate([

@@ -74,10 +74,10 @@
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
                                                     <li class="tocify-item level-2" data-unique="endpoints-POSTapi-upload-csv">
-                                <a href="#endpoints-POSTapi-upload-csv">POST api/upload-csv</a>
+                                <a href="#endpoints-POSTapi-upload-csv">Upload Csv</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-test-number">
-                                <a href="#endpoints-POSTapi-test-number">POST api/test-number</a>
+                                <a href="#endpoints-POSTapi-test-number">Test number</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -112,12 +112,12 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="endpoints-POSTapi-upload-csv">POST api/upload-csv</h2>
+                                <h2 id="endpoints-POSTapi-upload-csv">Upload Csv</h2>
 
 <p>
 </p>
 
-
+<p>This endpoint allows you to upload the csv, manipulate the data and save the records on the database.</p>
 
 <span id="example-requests-POSTapi-upload-csv">
 <blockquote>Example request:</blockquote>
@@ -135,7 +135,7 @@ $response = $client-&gt;post(
         'multipart' =&gt; [
             [
                 'name' =&gt; 'csv',
-                'contents' =&gt; fopen('/tmp/phpzVx0Nl', 'r')
+                'contents' =&gt; fopen('/tmp/phpfn3deZ', 'r')
             ],
         ],
     ]
@@ -149,7 +149,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     "http://localhost/api/upload-csv" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "csv=@/tmp/phpzVx0Nl" </code></pre></div>
+    --form "csv=@/tmp/phpfn3deZ" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -246,16 +246,16 @@ fetch(url, {
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Example: <code>/tmp/phpzVx0Nl</code></p>
+<p>Must be a file. Example: <code>/tmp/phpfn3deZ</code></p>
         </div>
         </form>
 
-                    <h2 id="endpoints-POSTapi-test-number">POST api/test-number</h2>
+                    <h2 id="endpoints-POSTapi-test-number">Test number</h2>
 
 <p>
 </p>
 
-
+<p>This endpoint allows to test or attempt to correct a single provided number.</p>
 
 <span id="example-requests-POSTapi-test-number">
 <blockquote>Example request:</blockquote>
@@ -271,7 +271,7 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'number' =&gt; 'delectus',
+            'number' =&gt; 'commodi',
         ],
     ]
 );
@@ -285,7 +285,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"number\": \"delectus\"
+    \"number\": \"commodi\"
 }"
 </code></pre></div>
 
@@ -301,7 +301,7 @@ const headers = {
 };
 
 let body = {
-    "number": "delectus"
+    "number": "commodi"
 };
 
 fetch(url, {
@@ -382,10 +382,10 @@ fetch(url, {
  &nbsp;
                 <input type="text" style="display: none"
                name="number"                data-endpoint="POSTapi-test-number"
-               value="delectus"
+               value="commodi"
                data-component="body">
     <br>
-<p>Example: <code>delectus</code></p>
+<p>Example: <code>commodi</code></p>
         </div>
         </form>
 
